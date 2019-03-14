@@ -19,8 +19,8 @@ class Express extends React.Component {
                 <br />
                 <div className="mt-2 container-fluid p-5">
                     <div className="row">
-                        <div className="col-3 d-none d-lg-block d-xl-block"></div>
-                        <div className="col-lg-6 col-sm-12  col-xs-12 text-center">
+                        <div className="col-2 d-none d-lg-block d-xl-block"></div>
+                        <div className="col-lg-8 col-sm-12  col-xs-12 text-center">
                             <h3 className="text-left">Introducing Express Js</h3>
                             <br />
                             <p className="text-left">
@@ -54,7 +54,7 @@ class Express extends React.Component {
                                 With that out of the way, let’s get started!
                             </p>
                         </div>
-                        <div className="col-3 d-none d-lg-block d-xl-block"></div>
+                        <div className="col-2 d-none d-lg-block d-xl-block"></div>
                     </div>
                 </div>
             </div>
