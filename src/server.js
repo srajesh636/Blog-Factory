@@ -15,7 +15,7 @@ app.get('/express', function(request, response) {
     // replace the special strings with server generated strings
     data = data.replace(/\$OG_TITLE/g, 'Express');
     data = data.replace(/\$OG_DESCRIPTION/g, "Blog Factory | Express");
-    result = data.replace(/\$OG_IMAGE/g, 'https://i.imgur.com/V7irMl8.png');
+    result = data.replace(/\$OG_IMAGE/g,'https://expressjs.com/images/express-facebook-share.png');
     response.send(result);
   });
 });
@@ -29,7 +29,7 @@ app.get('/react', function(request, response) {
     }
     data = data.replace(/\$OG_TITLE/g, 'React');
     data = data.replace(/\$OG_DESCRIPTION/g, "Blog Factory | React");
-    result = data.replace(/\$OG_IMAGE/g, 'https://i.imgur.com/V7irMl8.png');
+    result = data.replace(/\$OG_IMAGE/g, 'https://miro.medium.com/max/480/1*To2H39eauxaeYxYMtV1afQ.png');
     response.send(result);
   });
 });
@@ -43,7 +43,7 @@ app.get('/redux', function(request, response) {
     }
     data = data.replace(/\$OG_TITLE/g, 'Redux');
     data = data.replace(/\$OG_DESCRIPTION/g, "Blog Factory | Redux");
-    result = data.replace(/\$OG_IMAGE/g, 'https://i.imgur.com/V7irMl8.png');
+    result = data.replace(/\$OG_IMAGE/g, 'https://i2.wp.com/blog.js-republic.com/wp-content/uploads/2016/11/logo-redux.png?fit=500%2C500');
     response.send(result);
   });
 });
@@ -57,7 +57,7 @@ app.get('/node', function(request, response) {
       }
       data = data.replace(/\$OG_TITLE/g, 'Node Js');
       data = data.replace(/\$OG_DESCRIPTION/g, "Blog Factory | NodeJs");
-      result = data.replace(/\$OG_IMAGE/g, 'https://i.imgur.com/V7irMl8.png');
+      result = data.replace(/\$OG_IMAGE/g, 'https://pluralsight.imgix.net/paths/path-icons/nodejs-601628d09d.png');
       response.send(result);
     });
   });

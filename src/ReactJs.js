@@ -62,6 +62,12 @@ $ cd hello-world`}
               <SyntaxHighlighter language="command" style={atomOneDark} className= "text-left pl-3">
                 { '$ npm start'}
               </SyntaxHighlighter>
+              <p className="text-left">
+                Now you can see that the code present is App.js is what you see on the localhost:3000 .
+              </p>
+              <SyntaxHighlighter language="command" style={atomOneDark} className= "text-left pl-3">
+                { '$ npm start'}
+              </SyntaxHighlighter>
             </div>
             <div className="col-2 d-none d-lg-block d-xl-block d-md-none" />
           </div>
