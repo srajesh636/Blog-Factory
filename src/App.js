@@ -16,7 +16,7 @@ class App extends Component {
           <Navbar />
           <div>
             <Switch>
-              <Route path="/react" component={ReactJs} />
+              <Route path="/" component={ReactJs} />
               <Route path="/node" component={Node} />
               <Route path="/express" component={Express} />
               <Route path="/redux" component={Redux} />
