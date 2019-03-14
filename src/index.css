@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito|Raleway:400,700');
+
+p{
+  font-family: 'Nunito', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -6,9 +12,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    letter-spacing: 0.01rem;
+    letter-spacing: 0.04rem;
     font-size: 1.2rem;
-    line-height: 1.75em;
+    line-height: 1.90em;
     color: #4B525A;
 }
 
@@ -52,4 +58,22 @@ code {
   background-size: cover;
   background-size: 100% 100%;
   BACKGROUND-POSITION: center;
+}
+
+.logo{
+  width: 135px
+}
+
+nav{
+   background-image: linear-gradient(to left, #141E30,#243B55); 
+}
+
+.navbar-light .navbar-nav .nav-link{
+  color:white !important;
+}
+
+h2,h3 ,h4,h5,h6{
+  color:black !important;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600
 }

@@ -55,8 +55,8 @@ app.get('/node', function(request, response) {
       if (err) {
         return console.log(err);
       }
-      data = data.replace(/\$OG_TITLE/g, 'Node');
-      data = data.replace(/\$OG_DESCRIPTION/g, "Blog Factory | Node");
+      data = data.replace(/\$OG_TITLE/g, 'Node Js');
+      data = data.replace(/\$OG_DESCRIPTION/g, "Blog Factory | NodeJs");
       result = data.replace(/\$OG_IMAGE/g, 'https://i.imgur.com/V7irMl8.png');
       response.send(result);
     });
