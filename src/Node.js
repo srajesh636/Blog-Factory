@@ -1,4 +1,6 @@
 import React from 'react';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { atomOneDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 class Node extends React.Component {
     constructor(props) {
@@ -6,6 +8,7 @@ class Node extends React.Component {
         this.state = {}
     }
     render() {
+ 
         return (
             <div>
                 <div className="jumbotron jumbotron-fluid bg-node">
