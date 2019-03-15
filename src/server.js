@@ -3,25 +3,40 @@ const app = express();
 const port = process.env.PORT || 5000;
 const path = require('path');
 const fs = require('fs')
+var fm = require('front-matter');
+var marked = require('marked');
+var blogData;
 
 app.get('/express', function(request, response) {
-  console.log('Home page visited!');
   const filePath = path.resolve(__dirname, '../build', 'index.html');
-  // read in the index.html file
+  const blogFilePath = path.resolve(__dirname, './blogs', '5-lessons-on-making-good-first-impressions.md')
+  var md = require("markdown").markdown;
+  fs.readFile(blogFilePath, { encoding: 'utf-8' }, function (err, data) {
+      if (!err) {
+        var blog = fm(data);
+        blog.attributes.url = blogFilePath;
+        blogData = blog;
+      } else {
+        console.log(err);
+      }
+   });
+    
   fs.readFile(filePath, 'utf8', function (err,data) {
     if (err) {
       return console.log(err);
     }
-    // replace the special strings with server generated strings
-    data = data.replace(/\$OG_TITLE/g, 'Express');
-    data = data.replace(/\$OG_DESCRIPTION/g, "Blog Factory | Express");
-    result = data.replace(/\$OG_IMAGE/g,'https://expressjs.com/images/express-facebook-share.png');
-    response.send(result);
+    if(blogData){
+      var blogMeta= blogData.attributes;
+      // replace the special strings with server generated strings
+      data = data.replace(/\$OG_TITLE/g,blogMeta.ogTitle);
+      data = data.replace(/\$OG_DESCRIPTION/g, blogMeta.ogDescription);
+      result = data.replace(/\$OG_IMAGE/g,blogMeta.ogImage);
+      response.send(result);
+    }
   });
 });
 
 app.get('/react', function(request, response) {
-  console.log('About page visited!');
   const filePath = path.resolve(__dirname, '../build', 'index.html')
   fs.readFile(filePath, 'utf8', function (err,data) {
     if (err) {
@@ -35,7 +50,6 @@ app.get('/react', function(request, response) {
 });
 
 app.get('/redux', function(request, response) {
-  console.log('Contact page visited!');
   const filePath = path.resolve(__dirname, '../build', 'index.html')
   fs.readFile(filePath, 'utf8', function (err,data) {
     if (err) {
@@ -49,7 +63,6 @@ app.get('/redux', function(request, response) {
 });
 
 app.get('/node', function(request, response) {
-    console.log('Contact page visited!');
     const filePath = path.resolve(__dirname, '../build', 'index.html')
     fs.readFile(filePath, 'utf8', function (err,data) {
       if (err) {
@@ -71,3 +84,5 @@ app.get('*', function(request, response) {
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
+
+

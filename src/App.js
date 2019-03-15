@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
-import Express from './Express';
-import Navbar from './Navbar';
-import Node from './Node';
-import ReactJs from './ReactJs';
-import Redux from './Redux';
-import Footer from './Footer';
+import Express from './components/Express';
+import Navbar from './components/Navbar';
+import Node from './components/Node';
+import ReactJs from './components/ReactJs';
+import Redux from './components/Redux';
+import Footer from './components/Footer';
 
 class App extends Component {
   render() {
